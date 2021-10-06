@@ -1,0 +1,48 @@
+@import url("navbar-styles.css");
+
+html {
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  background-image: radial-gradient(#1b232b, #000);
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+.devices-content {
+  background-color: white;
+  border-radius: 1rem;
+  color: black;
+  margin-top: 3%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 7%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  overflow: auto;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  body {
+    background-color: black;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    margin-top: 1.8rem;
+  }
+
+  .devices-dropdown select {
+    font-weight: bold;
+    width: fit-content;
+    padding-right: 10%;
+  }
+}

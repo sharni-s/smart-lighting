@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sharni">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@500;600;700&family=Ubuntu:wght@300&display=swap&family=Acme&family=Gentium+Basic&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/home-styles.css">
+
+    <title>Home</title>
+</head>
+
+<body class="common-container">
+
+    <div class="gradient-1">
+        <div class="navigation-bar">
+            <%- include('navbar.ejs') %>
+        </div>
+        <h1 class="text-center home-title">Home</h1>
+    </div>
+    
+    <div class="home-content">
+        <div class="card-deck">
+            <div class="row">
+                <% locations.forEach(location => { %>
+                <div class="col-lg-4 col-md-6 col-xs-6 mb-4 border-0">
+                    <a href="/location/<%= location._id %>" class="card text-wrap mt-2 mx-3 mb-2 h-100 w-100">
+                        <div class="card-body">
+                            <h2 class="card-title mt-2 mb-4">
+                                <%= location.name %>
+                            </h2>
+                            <p class="card-text text-start"><img
+                                    src="images\stairs.png" alt="stairs-img" class="icon-img"> Floor <%=
+                                    location.floorNo %>
+                            </p>
+                            <p class="card-text text-start"><img
+                                    src="images\lamp.png" alt="devices-img" class="icon-img"> Lights 
+                                <%= location.lights.length %> 
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <% }); %>
+                
+               
+                    <div class="col-lg-4 col-md-6 col-xs-6 mb-4 border-0">
+                        <a href="/add-locations" class="card text-wrap mt-2 mx-3 mb-2 h-100 w-100 add-location">
+                            <div class="card-body align-items-center d-flex .flex-row justify-content-center">
+                                <h2 class="card-title text-center add-location-icon"><i class="fas fa-plus"></i></h2>
+                                <br>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

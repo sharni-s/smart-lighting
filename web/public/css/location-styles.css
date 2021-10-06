@@ -1,0 +1,298 @@
+@import url("navbar-styles.css");
+
+html {
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  background-image: radial-gradient(#1c2733, #000);
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+.room-title {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-top: 7%;
+  font-family: "Mukta Malar", sans-serif;
+}
+
+.room-title p a {
+  color: rgb(255, 255, 255);
+  font-size: 2.2rem;
+}
+
+.room-content {
+  margin-bottom: 2%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  font-family: "Mukta Malar", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.light-state,
+.light-colour,
+.light-mode,
+.aircon-state,
+.aircon-temp,
+.room-temp,
+.aircon-mode,
+.pref-colour,
+.pref-temp {
+  background: rgb(255, 255, 255);
+  width: auto;
+  height: auto;
+  border-radius: 1.5rem;
+}
+
+.card {
+  min-height: 9rem;
+}
+
+.light-state .card-body .card-title {
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.aircon-state .card-body .card-title {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.light-visualise,
+.aircon-visualise {
+  border-radius: 1.5rem;
+  border: 1%;
+  background: transparent;
+  align-items: center;
+  height: auto;
+}
+
+.pref-card {
+  border-radius: 1.5rem;
+  border: 1%;
+  border-color: white;
+  background: white;
+  color: rgb(0, 0, 0);
+  height: auto;
+}
+
+.pref-card .card-body .card-title {
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.light-brightness,
+.pref-brightness {
+  background: rgb(255, 255, 255);
+  width: auto;
+  height: auto;
+  border-radius: 1.5rem;
+}
+
+.light-brightness .card-body .card-title,
+.pref-brightness .card-body .card-title {
+  display: inline-block;
+}
+
+.color-input {
+  max-width: 7rem;
+  font-size: 1.2rem;
+  margin-bottom: 4%;
+}
+
+.submit-card {
+  border-color: #fbfbfb;
+  background: transparent;
+  background-image: none;
+  border-radius: 1.5rem;
+}
+
+.submit-card:hover {
+  background: #f7f8f8;
+}
+
+.submit-card:hover .submit-icon {
+  background: none;
+  color: rgb(22, 21, 21);
+  border-color: black;
+}
+
+.submit-icon {
+  color: #ffffff;
+}
+
+.room-temp-img {
+  max-width: 2.8rem;
+  max-height: 2.8rem;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+/* START: Switch Styles */
+/* Basic Rules */
+.switch input {
+  display: none;
+}
+.switch {
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+  margin: auto;
+  transform: translateY(50%);
+  position: relative;
+}
+/* Style Wired */
+.slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 2px #777, 0 0 4px #777;
+  cursor: pointer;
+  border: 4px solid transparent;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #777;
+  border-radius: 25px;
+  transform: translateX(-100%);
+  transition: 0.4s;
+}
+input:checked + .slider:before {
+  transform: translateX(1px);
+  background: #216392;
+}
+input:checked + .slider {
+  box-shadow: 0 0 0 2px #216392, 0 0 2px #216392;
+}
+/* END: Switch Styles */
+
+/* START: RANGE SLIDER */
+.range-slider {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 0.5rem;
+  background: #fb7ba2;
+  background-image: linear-gradient(to right, #364b61, #f4f89ce7);
+  border-radius: 1rem;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 40px;
+  background: #284b62;
+  cursor: pointer;
+}
+
+.range-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #fb7ba2;
+  cursor: pointer;
+}
+
+.temp-range-slider {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 0.5rem;
+  background-image: linear-gradient(
+    to left,
+    rgb(206, 18, 18),
+    rgb(23, 120, 231)
+  );
+  border-radius: 1rem;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.temp-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 40px;
+  background-color: rgb(68, 67, 67);
+  border-color: black;
+  cursor: pointer;
+}
+
+.temp-range-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #b6b8b7;
+  cursor: pointer;
+}
+/* END: RANGE SLIDER */
+
+.plots {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.plot-content {
+  margin-top: 3%;
+  margin-bottom: 5%;
+  margin-left: 21%;
+  margin-right: 21%;
+  overflow-x: scroll;
+}
+
+.tempPlot,
+.ambientPlot {
+  margin-bottom: 7%;
+  width: 42rem;
+  height: 25rem;
+}
+
+.prefPlot {
+  margin-bottom: 0%;
+  width: 42rem;
+  height: 25rem;
+}
+
+/* Responsive CSS */
+@media only screen and (max-width: 768px) {
+  .card {
+    min-height: 9.5rem;
+  }
+
+  .room-content {
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .plot-content {
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow-x: scroll;
+  }
+}

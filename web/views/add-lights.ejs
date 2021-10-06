@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sharni">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/add-lights-styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+
+    <title>Add Lights</title>
+</head>
+
+<body class="common-container">
+
+    <div class="navigation-bar">
+        <%- include('navbar.ejs') %>
+    </div>
+
+    <div class="add-devices-content">
+        <div class="row add-devices-title">
+            <p class="text-center fs-1">Add Light</p>
+        </div>
+
+        <div class="row add-devices-container">
+            <form action="/add-lights" method="POST" class="add-devices-form mx-auto">
+                <div class="mt-0">
+                    <label for="deviceId" class="form-label">ID</label>
+                    <input type="text" class="form-control" name="deviceId" required>
+                </div>
+                <p class="mt-2 mb-3" style="color: rgb(194, 0, 0); display: <%= error_display %>;">
+                    <%= error_message %>
+                </p>
+                <div class="mt-3">
+                    <label for="deviceName" class="form-label">Name</label>
+                    <input type="text" class="form-control" name="deviceName" required>
+                </div>
+                <div class="mt-3">
+                    <label for="deviceMan" class="form-label">Manufacturer</label>
+                    <input type="text" class="form-control" name="deviceMan" required>
+                </div>
+                <div class="mt-3">
+                    <label for="product" class="form-label">Product</label>
+                    <input type="text" class="form-control" name="product" required>
+                </div>
+                <button type="submit" class="btn btn-dark btn-lg w-100 mt-5 mb-3">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+
+
+</body>
+
+</html>

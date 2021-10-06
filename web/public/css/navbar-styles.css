@@ -1,0 +1,56 @@
+/* Navigation Bar Styles */
+nav {
+    font-size: 1.3rem;
+    font-family: "Lato", sans-serif;
+    background: transparent;
+  }
+  
+  .navbar-brand {
+    margin-right: 0px;
+  }
+  
+  .navbar-brand i,
+  span {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+  }
+  
+  .navbar-toggler {
+    color: rgb(255, 255, 255);
+  }
+  
+  .nav-item {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: 900;
+  }
+  
+  .nav-item a:hover {
+    color: #d2fafb;
+  }
+  
+  .logout-btn {
+    border-color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: whitesmoke;
+  }
+  
+  .logout-btn:hover {
+    border-color: white;
+  }
+  
+  /* Responsive CSS */
+  @media (max-width: 768px) {
+    .nav-item {
+      margin-top: 0.5rem;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .logout-btn {
+      margin-top: 0.5rem;
+    }
+  }
+  /* End of Navigation Bar Styles */
+  

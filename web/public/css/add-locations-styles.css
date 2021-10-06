@@ -1,0 +1,61 @@
+@import url("navbar-styles.css");
+
+body {
+  background-image: radial-gradient(#232f3a, #000);
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 1.8rem;
+}
+
+.add-room-title {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.add-room-title p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.add-room-container {
+  border-radius: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: white;
+  color: #000;
+  font-size: 1.125rem;
+}
+
+.choices-multiple-remove-button {
+  overflow: scroll;
+}
+
+/* Responsive CSS */
+@media (max-width: 992px) {
+  body {
+    background-color: black;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    margin-top: 1.8rem;
+  }
+
+  .add-room-container {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: white;
+    color: #000;
+  }
+}

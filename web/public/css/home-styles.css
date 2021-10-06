@@ -1,0 +1,114 @@
+@import url("navbar-styles.css");
+
+body {
+  background-color: rgb(14, 13, 13);
+}
+
+.home-content {
+  color: aliceblue;
+  margin-top: 8%;
+  margin-bottom: 10%;
+  margin-left: 12%;
+  margin-right: 12%;
+  font-family: "Mukta Malar", sans-serif;
+}
+
+.gradient-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.609), rgba(0, 0, 0, 0.534)),
+    url("http://cdn.home-designing.com/wp-content/uploads/2016/06/dark-and-sophisticated-interior-ideas.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-blend-mode: multiply;
+  padding-top: 1.8rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.home-title {
+  padding-top: 5%;
+  color: rgb(218, 218, 218);
+  padding-bottom: 8%;
+  font-weight: bolder;
+  font-size: 4rem;
+  font-family: "Gentium Basic", serif;
+}
+
+.card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.664)),
+    url("http://cdn.home-designing.com/wp-content/uploads/2016/06/dark-and-sophisticated-interior-ideas.jpg");
+  border-color: rgba(255, 255, 255, 0.363);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-blend-mode: multiply;
+  padding-left: 3%;
+  padding-bottom: 3%;
+  border-radius: 1.5rem;
+  text-decoration: none;
+
+  min-height: 12rem;
+}
+
+.card-title {
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+}
+
+.card-body {
+  color: rgba(255, 255, 255, 0.904);
+}
+
+.icon-img {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-right: 7%;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.add-location {
+  border-color: rgba(255, 255, 255, 0.363);
+  background: transparent;
+  background-image: none;
+}
+
+.add-location:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.664)),
+    url("http://cdn.home-designing.com/wp-content/uploads/2016/06/dark-and-sophisticated-interior-ideas.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-blend-mode: multiply;
+  border-color: rgba(255, 255, 255, 0.363);
+}
+
+.add-location:hover .add-location-icon {
+  background: none;
+  color: white;
+}
+
+.add-location-icon {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.363);
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .home-title {
+    padding-top: 12%;
+    padding-bottom: 15%;
+  }
+}

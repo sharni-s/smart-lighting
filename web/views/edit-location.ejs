@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sharni">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/add-locations-styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+
+    <title>Edit Location</title>
+</head>
+
+<body class="common-container">
+
+    <div class="navigation-bar">
+        <%- include('navbar.ejs') %>
+    </div>
+
+    <div class="row add-room-title">
+        <p class="text-center fs-1">Edit Location</p>
+    </div>
+
+    <div class="row add-room-container">
+        <form action="/edit-location/<%= roomInfo._id %>" method="POST" class="add-room-form mx-auto">
+            <div class="">
+                <label for="roomName" class="form-label">Name</label>
+                <input disabled type="text" class="form-control" name="roomName" value="<%= roomInfo.name %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="floorNo" class="form-label">Floor</label>
+                <input disabled type="number" class="form-control" name="floorNo" value="<%= roomInfo.floorNo %>" required>
+            </div>
+            <label for="lights" class="form-label">Lights</label>
+            <select name="lights" class="choices-multiple-remove-button" placeholder="Select" multiple required>
+                <% roomInfo.lights.forEach(device => { %>
+                    <option value="<%= device.id %>" selected><%= device.id %> - <%= device.name %></option>
+                <% }); %>
+                <% freeDevices.freeLights.forEach(device => { %>
+                    <option value="<%= device._id %>"><%= device._id %> - <%= device.name %></option>
+                <% }); %>
+            </select>            
+            <button type="submit" class="btn btn-dark btn-lg w-100 mt-2 mb-3">Submit</button>
+        </form>
+        <form action="/delete-location/<%= roomInfo._id %>" method="POST">
+            <button type="submit" class="btn btn-outline-danger btn-lg w-100 mt-2 mb-0">Delete Location</button>
+        </form>
+    </div>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+    <!-- Custom Script -->
+    <script src="/js/edit-location-app.js"></script>
+
+</body>
+
+</html>
