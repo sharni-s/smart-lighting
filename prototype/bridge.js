@@ -51,10 +51,12 @@ client.on("message", (topic, message) => {
 
   let msg = `${state},${brightness},${red},${green},${blue},${mode}\n`;
   
-  lightPorts[lightId].write(msg, function (err) {
-    if (err) {
-      return console.log("Error on write: ", err.message);
-    }
-    console.log("message written");
-  });
+  if(lightPorts[lightId]) {
+    lightPorts[lightId].write(msg, function (err) {
+      if (err) {
+        return console.log("Error on write: ", err.message);
+      }
+      console.log("message written");
+    });
+  }
 });
