@@ -18,7 +18,7 @@ app.use(express.json());
 
 // Custom middleware that attaches response headers for cross-origin requests
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Origin", "*"); // Replace "*" with main server URL
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"

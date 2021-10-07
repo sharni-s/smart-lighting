@@ -1,8 +1,12 @@
 const port = process.env.PORT || 3000;
 
-const LOCATION_SETUP_SERVICE = "http://localhost:5000/api";
-const LIGHT_SETUP_SERVICE = "http://localhost:5001/api";
-const LIGHT_SERVICE = "http://localhost:3050/api";
+// const LOCATION_SETUP_SERVICE = "http://localhost:5000/api";
+// const LIGHT_SETUP_SERVICE = "http://localhost:5001/api";
+// const LIGHT_SERVICE = "http://localhost:5001/api";
+
+const LIGHT_SERVICE = "http://3.86.42.4:3050/api";
+const LOCATION_SETUP_SERVICE = "http://3.86.42.4:5000/api";
+const LIGHT_SETUP_SERVICE = "http://3.86.42.4:5001/api";
 
 const express = require("express");
 const ejs = require("ejs");
